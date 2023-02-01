@@ -7,8 +7,62 @@
   pointer-events: none;
 }
 
-.no-padding {
-  padding: 0;
+.detector-area {
+  width: calc(100% - 195px) !important;
+  border-radius: 8px 0 0 8px;
+}
+
+.percentage-area {
+  width: 195px !important;
+  display: flex;
+  align-items: center;
+  border-radius: 0 8px 8px 0;
+}
+
+.field-title {
+  font-family: Poppins,sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.field-title:not(:first-child) {
+  margin-top: 20px;
+}
+
+.action-btn {
+  cursor: pointer;
+  background: #000;
+  text-decoration: none;
+  font-family: Poppins,sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  vertical-align: middle;
+  padding: 5px 10px;
+  min-height: 48px;
+  border-color: black;
+}
+
+.action-btn:not(:disabled):hover {
+  color: white;
+  background: black;
+  border-color: black;
+}
+
+.action-btn:active {
+  border-color: black !important;
+  background: black !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
