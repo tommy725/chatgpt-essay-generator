@@ -20,7 +20,7 @@ function App() {
   const [prefix, setPrefix] = useState('Print only without "%" how many percentage you can evaluate to write this yourself?: "')
   const [suffix, setSuffix] = useState('"')
 
-  async function onCheck() {
+  const onCheck = async () => {
     try {
       const values = await form.validateFields();
       
@@ -39,11 +39,11 @@ function App() {
 
       setPercent(`${response.data.choices[0].text}`);
       
-      if (percent > 50) {
-        setAnswer("Yes");
+      if (percent > 80) {
+        setAnswer("Yes, I wrote this.");
         console.log("Yes", percent);
       } else {
-        setAnswer("No");
+        setAnswer("No, I didn't write this.");
         console.log("no", percent);
       }
 
@@ -74,7 +74,7 @@ function App() {
                     },
                   ]}
                 >
-                  <Input 
+                  <Input.TextArea 
                     placeholder="" 
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
