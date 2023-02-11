@@ -8,7 +8,7 @@
 }
 
 .detector-area {
-  width: calc(100% - 195px) !important;
+  width: 100% !important;
   border-radius: 8px 0 0 8px !important;
 }
 
